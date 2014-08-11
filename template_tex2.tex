@@ -1,0 +1,267 @@
+%\documentclass[a4paper,10pt,fleqn]{jsarticle}
+\documentclass[a4paper,fleqn]{jsarticle}
+
+% title
+%\title{TeX}
+%\date{}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{bm}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[dvipdfmx]{color}
+%\usepackage{ascmac}	% required for `\screen' (yatex added)
+\usepackage{okumacro}
+%% tree display
+%\usepackage{eclclass}
+
+%% source code
+%\usepackage{listings,jlisting}
+%\renewcommand{\lstlistingname}{source code}
+%\lstset{language=C++,
+%basicstyle=\ttfamily\small,
+%  commentstyle={ \color[cmyk]{1,0.4,1,0}},
+%  classoffset=1,
+%  keywordstyle={\bfseries \color[cmyk]{0,1,0,0}},
+%  stringstyle={\ttfamily \color[rgb]{0,0,1}},
+%  frame=tRBl,
+%  framesep=5pt,
+%  showstringspaces=false,
+%  numbers=left,
+%  stepnumber=1,
+%  numberstyle=\small,
+%  tabsize=2,
+%}
+
+%\renewcommand{\figurename}{Fig.}
+%\renewcommand{\refname}{Reference}
+%\renewcommand{\contentsname}{Contents}
+%\renewcommand{\abstractname}{Abstract}
+
+%layout 
+\setlength{\topmargin}{-20mm}
+\setlength{\textheight}{25.5cm}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+
+\pagestyle{headings}
+
+%date 
+\def\today{%
+  \ifcase\month\or
+                Jan.\or Feb.\or Mar.\or Apr.\or May.\or Jun.\or
+                Jul.\or Aug.\or Sep.\or Oct.\or Nov.\or Dec.
+  		\fi\hspace{0.0em} 
+%  \ifnum\month<10 0\fi\the\month/%
+  \ifnum\day<10 0\fi\the\day, 
+  \the\year%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% end preamble
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+
+
+\thispagestyle{plain}
+%% report title
+\begin{flushleft}
+\begin{Large}
+Title
+\end{Large}
+\end{flushleft}
+
+%% author
+\begin{flushright}
+\西暦
+作成　Jan. 09, 2014\\
+改訂　\today\\
+Author
+\end{flushright}
+
+%% revised data
+\begin{flushleft}
+更新履歴
+\end{flushleft}
+\begin{description}
+ \item[20XX/1/1]\mbox{}\\ 
+	    改訂1
+\end{description}
+
+\begin{abstract}
+ abstract
+\end{abstract}
+
+\hrulefill
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  本文
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{section}
+
+\subsection{subsection}
+\begin{align*}
+\alpha \beta \gamma \varepsilon \epsilon \phi \varphi
+\end{align*}
+
+\begin{align}
+&\nabla \cdot\nabla  \\
+&\sum^{n}_{k=1} k =\frac{1}{6}n(n+1)(2n+1) \\
+\end{align}
+
+\begin{align}
+& x+y=0 \\
+&Y=\log(x)\\
+&\frac{\partial c}{\partial t} +(\bm{u}\cdot \nabla )c=D\nabla ^2 c
+ \end{align}
+
+\begin{screen}
+ j
+\end{screen}
+
+\begin{align}
+ \left( \right)
+\left\{ \right\}
+\left[ \right]
+\end{align}
+
+\subsubsection{test}
+今回の範囲．
+
+式
+
+
+%\begin{itemize}
+% \item 記号箇条書き
+% \item 記号箇条書き
+%       \begin{itemize}
+%	\item 記号箇条書き　入れ子
+%       \end{itemize}
+%
+%\end{itemize}
+
+
+%\begin{enumerate}
+%\item 数字つき箇条書き1
+%\item 数字付き箇条書き2     
+%\begin{enumerate}
+% \item 数字付き箇条書き
+%\end{enumerate}
+%\end{enumerate}
+
+%\begin{description}
+% \item[見出し]\mbox{}\\ 
+%	    箇条書き
+% \item[見出し]\mbox{}\\ 
+%\end{description}
+
+%%% Figure
+ \begin{figure}[htbp]
+  \begin{center}
+   \includegraphics[scale=0.5]{test.pdf}
+   \caption{Figure }
+   \label{fig1}
+  \end{center}
+\end{figure}
+
+%% minipage 
+% \begin{figure}[htbp]
+% \begin{minipage}{0.5\hsize}
+%  \begin{center}
+%   \includegraphics[scale=0.4]{Fig/cylinder}
+%   \caption{円筒容器}
+%   \label{fig:cylinder}
+%  \end{center}
+% \end{minipage}
+%  \begin{minipage}{0.5\hsize}
+%  \begin{center}
+%   \includegraphics[scale=0.4]{Fig/gas-dist}
+%   \caption{初期ガス分布}
+%   \label{fig:gas-dist}
+%  \end{center}
+%\end{minipage}
+%\end{figure}
+
+
+%% tabular
+% \begin{figure}[htbp]
+%  \begin{center}
+%   \begin{tabular}{cc}
+%   \includegraphics[scale=0.3]{Fig/He-U-N2-He-injection-test13-zoom-0010.pdf}
+%   \includegraphics[scale=0.3]{Fig/He-U-N2-He-injection-test13-zoom-0015.pdf} 
+%   \end{tabular}
+%   \begin{tabular}{cc}
+%   \includegraphics[scale=0.3]{Fig/He-U-N2-He-injection-test13-zoom-0020.pdf}
+%   \includegraphics[scale=0.3]{Fig/He-U-N2-He-injection-test13-zoom-0025.pdf}
+%   \end{tabular}
+%   \caption{$U_{in}=20$m/sでのHeの質量分率および速度ベクトル図．時刻は秒．}
+%   \label{fig:Uin-20}
+%  \end{center}
+%\end{figure}
+
+%\begin{table}[htb]
+%  \begin{tabular}{|l|c|r||r|} \hline
+%    メニュー & サイズ & 値段 & カロリー \\ \hline \hline
+%    牛丼 & 並盛 & 500円 & 600 kcal \\
+%    牛丼 & 大盛 & 1,000円 & 800 kcal \\
+%    牛丼 & 特盛 & 1,500円 & 1,000 kcal \\ \hline
+%    牛皿 & 並盛 & 300円 & 250 kcal \\
+%    牛皿 & 大盛 & 700円 & 300 kcal \\
+%    牛皿 & 特盛 & 1,000円 & 350 kcal \\ \hline
+%  \end{tabular}
+%\end{table}
+
+
+%source code
+%\begin{lstlisting}[label=src:pisoFoam.C, caption=pisoFoam.C]
+% // comment
+%  int main(){
+%	int i;
+%	for(i=0; i<10; i++){
+%	 }
+%	return 0;
+%	}
+%\end{lstlisting}
+
+% tree 
+%\begin{classify}{\fbox{日本}}
+% \classf{北海道}
+% \class{\begin{classify}{\fbox{本州}}
+%	 \class{東北}
+%	 \classf{関東}
+%	 \end{classify}}
+%\end{classify}
+
+%% reference
+\begin{thebibliography}{99}
+\bibitem{test1} reference
+%\bibitem{test2} reference
+%\bibitem{test3} reference
+%
+\end{thebibliography}
+
+%\begin{mybibliography}{99}
+%\bibitem{foobar:1}
+%    XXXXX, 『○○○○○』, ○○新書, ISBNX-XX-XXXXXX-X, 2007年.
+%\bibitem{foobar:2}
+%    XXXXX, 『○○○○○』, ○○新書, ISBNX-XX-XXXXXX-X, 2007年.
+%\end{mybibliography}
+%
+%ここに短い文章(1～2段落)を書きたい。
+%
+%\begin{mybibliography}{99}
+%\bibitem{foobar:3}
+%    XXXXX, 『○○○○○』, ○○新書, ISBNX-XX-XXXXXX-X, 2007年.
+%\bibitem{foobar:4}
+%    XXXXX, 『○○○○○』, ○○新書, ISBNX-XX-XXXXXX-X, 2007年.
+%\end{mybibliography}
+
+
+
+
+\end{document}
