@@ -1,0 +1,14 @@
+delim_0 "\\leaders\\hbox{$\\cdot$}\\hfill "
+delim_1 "\\leaders\\hbox{$\\cdot$}\\hfill "
+delim_2 "\\leaders\\hbox{$\\cdot$}\\hfill "
+
+lethead_flag -1
+letter_head 2
+
+heading_prefix
+"{\\vbox{\\hbox to \\linewidth{\\sffamily\\bfseries\\gtfamily\\small "
+heading_suffix
+"\\ \\hskip\\fill}\\vskip 1pt\\hrule}}\n"
+headings_flag      1
+
+
